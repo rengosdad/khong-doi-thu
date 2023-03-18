@@ -85,8 +85,8 @@ pinMode(ld4,OUTPUT);
 pinMode(cambien, INPUT);
 pinMode(den,OUTPUT);
 digitalWrite(den,LOW);
-myStepper.setSpeed(15);
-myStepper2.setSpeed(15);
+myStepper.setSpeed(10);
+myStepper2.setSpeed(10);
 }
 lcd.begin (16,2);  // initialize the lcd 
   lcd.backlight();//To Power ON the back light
@@ -255,15 +255,19 @@ delay(100);
   }
   if(blt==4)
   {
+   
     myStepper.step(2 * -stepsPerRevolution);//myStepper2.step(-stepsPerRevolution / 2);
   delay(50);
+  
     
    Serial.println("4444444444");
   }
   else if(blt==5)
   {
+   
   myStepper.step(2 * stepsPerRevolution);
   delay(50);
+  
    
     Serial.println("55555555555555");
   }
@@ -293,12 +297,12 @@ delay(100);
 
  bt.print(temp);//send distance to MIT App
  bt.print(";");
-// bt.print(hum); //send distance to MIT App 
-// bt.println(";");
- bt.println(khoangcach);//khoản cách sensor siêu âm
- bt.println(";");
- bt.println(giatri);//
- bt.println(";");
+ bt.print(hum); //send distance to MIT App 
+ bt.print(";");
+ bt.print(khoangcach);//khoản cách sensor siêu âm
+ bt.print(";");
+ bt.print(giatri);//
+ bt.print(";");
                                                      // bt.print(mucnuoc); //send distance to MIT App value giá trị mức nước
                                                      //bt.println(";");
                                                      // bt.print(khach); //send distance to MIT App ON/OFF Giá trị cảm biến ánh sáng
